@@ -43,19 +43,19 @@ else:
 x=eval(input("Please enter temperature in Farenheit:"))
 
 while x<-58 or x>41:
-    p=eval(input("Number must be between -58 and 41, please re-enter:"))
-    if p<-58 or p>41:
+    x=eval(input("Number must be between -58 and 41, please re-enter:"))
+    if x<-58 or x>41:
         continue
-    if p>=-58 and p<=41:        
+    if x>=-58 and x<=41:        
         break
 y=eval(input("Enter wind speed:"))
 while y < 2:
-    i=eval(input("Number must be greater than or equal to 2, please re-enter:"))
-    if i < 2:
+    y=eval(input("Number must be greater than or equal to 2, please re-enter:"))
+    if y < 2:
         continue
-    if i>=2 :
+    if y>=2 :
         break        
-z=eval("35.74+0.6215*p-35.75*(i**(0.16))+0.4275*p*(i**(0.16))")
+z=eval("35.74+0.6215*x-35.75*(y**(0.16))+0.4275*x*(y**(0.16))")
 z2=format(z,".3f")
 print("")
 print("The wind-chill speed is",z2)
