@@ -6,13 +6,15 @@ Created on Tue Oct 26 12:12:36 2021
 """
 #Number 1
 
+def get_days(h,m,s):
+    return h/24+m/(60*24)+s/(24*3600)
+ 
 def convert_to_days():
     h=eval(input("Please enter number of hours:"))
     m=eval(input("Please enter number of minutes:"))
     s=eval(input("Please enter number of seconds:"))
-    c=eval("h/24+m/(60*24)+s/(24*3600)")
-    c2=format(c,".4f")
-    print(c2)
+    c=format(get_days(h,m,s),".4f")
+    print(c)
 
 #%%
 
@@ -49,15 +51,26 @@ def calc_new_height():
 #%%
 
 #Number 5
-   
+
+def convert_celcius(F):
+    return 5/9*(F-32)
+
+
+def convert_kelvin(C):
+    return C+273.15
+
+
 def convert_temp():
     F=eval(input("Enter a temperature in Farenheit:"))
-    C=5/9*(F-32)
-    K=C+273.15
-    print("")
+    C=convert_celcius(F)
+    K=convert_kelvin(C)
     print("The temperature in Farenheit is:",F)
-    print("The temperature in Celcius is",C)
+    print("The temperature in Celcius is:",C)
     print("The temperature in Kelvin is:",K)
+
+
+    
+
     
 
     
